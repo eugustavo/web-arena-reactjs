@@ -8,6 +8,8 @@ import dark from './styles/themes/dark';
 import GlobalStyle from './styles/global';
 import Header from './components/Header';
 import Home from './components/Home';
+import Jogos from './components/Jogos';
+import Contato from './components/Contato';
 
 const App = () => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
@@ -22,6 +24,8 @@ const App = () => {
         <GlobalStyle />
         <Header toggleTheme={toggleTheme} />
         <Home />
+        <Jogos />
+        <Contato />
       </div>
     </ThemeProvider>
   );

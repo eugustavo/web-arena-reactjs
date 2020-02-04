@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 60px;
+  height: 9vh;
   background: ${props => props.theme.colors.primary};
   color: #FFF;
   display: flex;
@@ -15,6 +15,10 @@ export const Logo = styled.div`
   display: flex;
   align-items: center;
   font-size: 18px;
+`;
+
+export const Text = styled.h1`
+  font-size: 22px;
 `;
 
 export const Nav = styled.div`
@@ -31,4 +35,5 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   margin-left: 15px;
   cursor: pointer;
+  text-transform: uppercase;
 `;

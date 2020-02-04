@@ -2,14 +2,19 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  height: calc(100vh) ; 
+  height: 91vh;
   flex-direction: row;
   padding: 0px 30px;
   align-items: center;
-  justify-content: center;
 `;
 
-export const ImageBackground = styled.div`
-  height: 400px;
-  width: 600px;
+export const ImageBackground = styled.img`
+  width: 633px;
+  height: 439px;
+  margin-left: 50px;
+`;
+
+export const Text = styled.h1`
+  font-size: 32px;
+  margin-left: 30px;
 `;

@@ -3,7 +3,7 @@ import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { shade } from 'polished';
 
-import { Container, Logo, Nav, List, ListItem } from './styles';
+import { Container, Logo, Nav, List, ListItem, Text } from './styles';
 import logo from '../../assets/arena.png';
 
 interface Props {
@@ -16,8 +16,8 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
   return(
     <Container>
       <Logo>
-        <img src={logo} alt="Arena" style={{ width: 40, height:40, marginRight: 10 }}/>
-        ARENA
+        <img src={logo} alt="Arena" style={{ width: 42, height:42, marginRight: 10 }}/>
+        <Text>ARENA</Text>
       </Logo>
 
       <Nav>

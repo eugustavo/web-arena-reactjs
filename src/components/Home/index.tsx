@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 
-import { Container, ImageBackground } from './styles';
-//import game from '../../assets/game-light.png';
+import { Container, ImageBackground, Text } from './styles';
 
-import './styles.css';
+import gamelight from '../../assets/game-light.png';
+import gamedark from '../../assets/game-dark.png';
 
 const Home: React.FC = () => {
+  const { title } = useContext(ThemeContext);
+
   return(
     <Container>
-      <ImageBackground />
+      { title === 'light' ?
+        <ImageBackground
+          src={gamedark}
+          alt="Game"
+        />
+      :
+        <ImageBackground
+          src={gamelight}
+          alt="Game"
+        />
+      }
+      <Text>
+        Algum texto impactante aqui
+      </Text>
     </Container>
   );
 }
