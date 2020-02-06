@@ -23,9 +23,9 @@ const App = () => {
       <div className="App">
         <GlobalStyle />
         <Header toggleTheme={toggleTheme} />
-        <Home />
-        <Jogos />
-        <Contato />
+        <Home key="#Home"/>
+        <Jogos key="#Jogos"/>
+        <Contato key="#Contato"/>
       </div>
     </ThemeProvider>
   );

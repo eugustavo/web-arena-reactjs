@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 
-import { Container, Text } from './styles';
+import { Container, ImageBackground, Text } from './styles';
+
+import contactLight from '../../assets/contact-light.png';
+import contactDark from '../../assets/contact-dark.png';
 
 const Contato: React.FC = () => {
+  const { title } = useContext(ThemeContext);
+  
   return(
     <Container>
+      { title === 'light' ?
+        <ImageBackground
+          src={contactDark}
+          alt="Contato"
+        />
+      :
+        <ImageBackground
+          src={contactLight}
+          alt="Contato"
+        />
+      }
       <Text>
-        Paginas de Contato
+        Contatos
       </Text>
     </Container>
   );

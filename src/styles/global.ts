@@ -14,4 +14,8 @@ export default createGlobalStyle`
     color: ${props => props.theme.colors.text};
     font-family: sans-serif;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
 `;

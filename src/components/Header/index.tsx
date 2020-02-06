@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { shade } from 'polished';
+import { FaSun, FaMoon } from 'react-icons/fa'
 
 import { Container, Logo, Nav, List, ListItem, Text } from './styles';
 import logo from '../../assets/arena.png';
@@ -16,7 +17,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
   return(
     <Container>
       <Logo>
-        <img src={logo} alt="Arena" style={{ width: 42, height:42, marginRight: 10 }}/>
+        <img src={logo} alt="Arena" style={{ width: 48, height:48, marginRight: 10 }}/>
         <Text>ARENA</Text>
       </Logo>
 
@@ -24,23 +25,23 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
         <List>
           <ListItem>Home</ListItem>
           <ListItem>Jogos</ListItem>
-          <ListItem>Inscrição</ListItem>
           <ListItem>Contato</ListItem>
+          <ListItem>Inscrição</ListItem>
         </List>
       </Nav>
 
       <Switch
         onChange={toggleTheme}
         checked={title === 'dark'}
-        checkedIcon={false}
-        uncheckedIcon={false}
-        height={10}
-        width={40}
+        checkedIcon={<FaSun size={15} style={{ marginTop: 3, marginLeft: 5}} />}
+        uncheckedIcon={<FaMoon size={15} style={{ marginTop: 3, marginLeft: 10}} />}
+        height={22}
+        width={50}
         handleDiameter={20}
-        offColor="#444"
+        offColor="#444444"
         onColor={shade(-0.5, colors.secundary)}
-        
-      />
+      >
+      </Switch>
     </Container>
   );
 }
