@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.container{
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+  padding: 0px 30px;
+  align-items: center;
+}
+
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 115%);
+}
+
+.card{
+  cursor: pointer;
+  width: 340px;
+  height: 480px;
+}
+
+.front, .back{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+}
+
+.front img {
+  width: 100%;
+  height: 100%;
+}
+
+.front {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.back {
+  background: #444;
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.back-content{
+  color: #FFF;
+  text-align: center;
+  width: 100%;
+}
+
+.button {
+  margin: 20px 0;
+}
+
+.button button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 42px;
+  padding: 0 15px;
+  border-radius: 7px;
+  background: rgb(22, 22, 22);
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.card:hover > .front{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
+}
